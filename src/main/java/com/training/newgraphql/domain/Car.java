@@ -1,4 +1,4 @@
-package com.deeeplabs.newgraphql.domain;
+package com.training.newgraphql.domain;
 
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;

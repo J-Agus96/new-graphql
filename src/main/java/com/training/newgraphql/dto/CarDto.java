@@ -1,4 +1,4 @@
-package com.deeeplabs.newgraphql.dto;
+package com.training.newgraphql.dto;
 
 import lombok.Data;
 

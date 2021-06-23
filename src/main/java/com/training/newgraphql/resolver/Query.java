@@ -1,18 +1,15 @@
-package com.deeeplabs.newgraphql.resolver;
+package com.training.newgraphql.resolver;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import com.deeeplabs.newgraphql.domain.Car;
-import com.deeeplabs.newgraphql.repository.CarRepository;
+import com.training.newgraphql.domain.Car;
+import com.training.newgraphql.repository.CarRepository;
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
 
-@ComponentScan
+//@ComponentScan
 //@Component
 @AllArgsConstructor
 public class Query implements GraphQLQueryResolver {

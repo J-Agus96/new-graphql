@@ -1,6 +1,6 @@
-package com.deeeplabs.newgraphql.repository;
+package com.training.newgraphql.repository;
 
-import com.deeeplabs.newgraphql.domain.Car;
+import com.training.newgraphql.domain.Car;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

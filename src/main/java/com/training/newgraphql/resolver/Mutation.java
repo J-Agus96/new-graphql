@@ -1,19 +1,16 @@
-package com.deeeplabs.newgraphql.resolver;
+package com.training.newgraphql.resolver;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
-import com.deeeplabs.newgraphql.domain.Car;
-import com.deeeplabs.newgraphql.dto.CarDto;
-import com.deeeplabs.newgraphql.repository.CarRepository;
+import com.training.newgraphql.domain.Car;
+import com.training.newgraphql.dto.CarDto;
+import com.training.newgraphql.repository.CarRepository;
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
 import java.time.OffsetDateTime;
 
-@ComponentScan
+//@ComponentScan
 //@Component
 @Transactional
 @AllArgsConstructor
