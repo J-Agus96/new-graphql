@@ -1,0 +1,6 @@
+com\deeeplabs\newgraphql\repository\CarRepository.class
+com\deeeplabs\newgraphql\NewGraphqlApplication.class
+com\deeeplabs\newgraphql\resolver\Mutation.class
+com\deeeplabs\newgraphql\resolver\Query.class
+com\deeeplabs\newgraphql\domain\Car.class
+com\deeeplabs\newgraphql\dto\CarDto.class
