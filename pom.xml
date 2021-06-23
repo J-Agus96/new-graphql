@@ -8,7 +8,7 @@
 		<version>2.4.7</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.deeeplabs</groupId>
+	<groupId>com.training</groupId>
 	<artifactId>new-graphql</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>new-graphql</name>
