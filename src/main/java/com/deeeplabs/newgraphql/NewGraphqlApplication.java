@@ -25,40 +25,40 @@ public class NewGraphqlApplication {
 		SpringApplication.run(NewGraphqlApplication.class, args);
 	}
 
-	@Autowired
-	CarRepository carRepository;
+//	@Autowired
+//	CarRepository carRepository;
 
-	@Bean
-	public ServletRegistrationBean servletRegistrationBean() {
+//	@Bean
+//	public ServletRegistrationBean servletRegistrationBean() {
+//
+//		GraphQLSchema schema  = SchemaParser.newParser()
+//				.resolvers(mutation(carRepository), query(carRepository))
+//				.file("graphql/schemaNewCar.graphql")
+//				.build().makeExecutableSchema();
+//		ExecutionStrategy executionStrategy = new AsyncExecutionStrategy();
+//		GraphQLServlet servlet = new SimpleGraphQLServlet(schema, executionStrategy);
+//		ServletRegistrationBean bean = new ServletRegistrationBean(servlet, "/graphql");
+//		return bean;
+//	}
 
-		GraphQLSchema schema  = SchemaParser.newParser()
-				.resolvers(mutation(carRepository), query(carRepository))
-				.file("graphql/schemaNewCar.graphql")
-				.build().makeExecutableSchema();
-		ExecutionStrategy executionStrategy = new AsyncExecutionStrategy();
-		GraphQLServlet servlet = new SimpleGraphQLServlet(schema, executionStrategy);
-		ServletRegistrationBean bean = new ServletRegistrationBean(servlet, "/graphql");
-		return bean;
-	}
+//	@Bean
+//	public Query query(CarRepository carRepository) {
+//		return new Query(carRepository);
+//	}
 
-	@Bean
-	public Query query(CarRepository carRepository) {
-		return new Query(carRepository);
-	}
+//	@Bean
+//	public Mutation mutation(CarRepository carRepository) {
+//		return new Mutation(carRepository);
+//	}
 
-	@Bean
-	public Mutation mutation(CarRepository carRepository) {
-		return new Mutation(carRepository);
-	}
-
-	@Bean
-	public WebMvcConfigurer corsConfigurer() {
-		return new WebMvcConfigurerAdapter() {
-			@Override
-			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("*").allowedOrigins("http://localhost:*");
-			}
-		};
-	}
+//	@Bean
+//	public WebMvcConfigurer corsConfigurer() {
+//		return new WebMvcConfigurerAdapter() {
+//			@Override
+//			public void addCorsMappings(CorsRegistry registry) {
+//				registry.addMapping("*").allowedOrigins("http://localhost:*");
+//			}
+//		};
+//	}
 
 }

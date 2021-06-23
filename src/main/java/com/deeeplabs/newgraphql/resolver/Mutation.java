@@ -13,13 +13,13 @@ import org.springframework.stereotype.Component;
 import javax.transaction.Transactional;
 import java.time.OffsetDateTime;
 
-//@ComponentScan
+@ComponentScan
 //@Component
 @Transactional
 @AllArgsConstructor
 public class Mutation implements GraphQLMutationResolver {
 
-//    @Autowired
+    @Autowired
     private CarRepository carRepository;
 
     public Car saveCar(CarDto carDto) {

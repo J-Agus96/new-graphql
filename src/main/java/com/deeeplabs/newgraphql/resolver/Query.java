@@ -12,12 +12,12 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.Optional;
 
-//@ComponentScan
+@ComponentScan
 //@Component
 @AllArgsConstructor
 public class Query implements GraphQLQueryResolver {
 
-//    @Autowired
+    @Autowired
     private CarRepository carRepository;
 
     public List<Car> findAllCars() {
