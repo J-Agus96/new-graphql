@@ -3,24 +3,16 @@ package com.training.newgraphql.resolver;
 import com.training.newgraphql.domain.Car;
 import com.training.newgraphql.dto.CarDto;
 import com.training.newgraphql.repository.CarRepository;
-import graphql.PublicApi;
 import graphql.kickstart.tools.GraphQLMutationResolver;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
 import java.time.OffsetDateTime;
 
-//@ComponentScan
-//@Component
 @Transactional
 @AllArgsConstructor
-//@PublicApi
 public class Mutation implements GraphQLMutationResolver {
 
-    @Autowired
     private CarRepository carRepository;
 
     public Car saveCar(CarDto carDto) {
