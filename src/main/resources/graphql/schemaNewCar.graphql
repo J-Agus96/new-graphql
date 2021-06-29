@@ -1,7 +1,5 @@
-schema{
-    query: Query
-    mutation: Mutation
-}
+#scalar DateTime
+#scalar BigDecimal
 
 type Query{
     findAllCars: [Car]
@@ -21,16 +19,16 @@ input CarSave {
     typeCar: String
     typeTransmission: String
     cylinderCapacity: Int
-    price: BigDecimal
+    price: Int
 }
 
 input CarUpdate {
     name: String!
     color: String!
-    type: String!
+    typeCar: String!
     typeTransmission: String!
     cylinderCapacity: Int!
-    price: BigDecimal!
+    price: Int!
 }
 
 type Car {
@@ -38,14 +36,14 @@ type Car {
     code: String!
     name: String!
     color: String!
-    type: String!
+    typeCar: String!
     typeTransmission: String!
     cylinderCapacity: Int!
-    price: BigDecimal!
+    price: Int!
     deleteFlag: Boolean!
-    createdAt: OffsetDateTime!
-    updatedAt: OffsetDateTime!
+    createdAt: String!
+    updatedAt: String!
 }
 
-scalar OffsetDateTime
-scalar BigDecimal
+
+

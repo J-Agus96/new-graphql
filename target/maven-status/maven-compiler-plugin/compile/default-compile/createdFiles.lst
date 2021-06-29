@@ -1,6 +1,6 @@
-com\deeeplabs\newgraphql\repository\CarRepository.class
-com\deeeplabs\newgraphql\NewGraphqlApplication.class
-com\deeeplabs\newgraphql\resolver\Mutation.class
-com\deeeplabs\newgraphql\resolver\Query.class
-com\deeeplabs\newgraphql\domain\Car.class
-com\deeeplabs\newgraphql\dto\CarDto.class
+com\training\newgraphql\NewGraphqlApplication.class
+com\training\newgraphql\repository\CarRepository.class
+com\training\newgraphql\domain\Car.class
+com\training\newgraphql\dto\CarDto.class
+com\training\newgraphql\resolver\Query.class
+com\training\newgraphql\resolver\Mutation.class

@@ -1,11 +1,14 @@
 package com.training.newgraphql.resolver;
 
-import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.training.newgraphql.domain.Car;
 import com.training.newgraphql.dto.CarDto;
 import com.training.newgraphql.repository.CarRepository;
+import graphql.PublicApi;
+import graphql.kickstart.tools.GraphQLMutationResolver;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
 import java.time.OffsetDateTime;
@@ -14,6 +17,7 @@ import java.time.OffsetDateTime;
 //@Component
 @Transactional
 @AllArgsConstructor
+//@PublicApi
 public class Mutation implements GraphQLMutationResolver {
 
     @Autowired
@@ -33,8 +37,8 @@ public class Mutation implements GraphQLMutationResolver {
         return carRepository.save(car);
     }
 
-    public Car updateCar(CarDto carDto) {
-        Car car = carRepository.findById(carDto.getId()).orElseThrow(() -> new RuntimeException("No Car Found with Id " + carDto.getId()));
+    public Car updateCar(String id, CarDto carDto) {
+        Car car = carRepository.findById(id).orElseThrow(() -> new RuntimeException("No Car Found with Id " + id));
         car.setName(carDto.getName());
         car.setTypeCar(carDto.getTypeCar());
         car.setCylinderCapacity(carDto.getCylinderCapacity());
